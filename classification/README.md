@@ -30,12 +30,17 @@ $ python logistic_regression/logitreg.py
   → 勾配法を利用して最適化は行われる  
   → クロスエントロピーは凸関数であり、**局所解=最適解**が保証される
 
-Sigmoid 関数 ： <img src="https://latex.codecogs.com/svg.latex?L&space;=&space;tlogy&space;-&space;(1-t)log(1-y)" title="L = tlogy - (1-t)log(1-y)" />
+Sigmoid 関数
+
+<img src="https://latex.codecogs.com/svg.latex?L&space;=&space;tlogy&space;-&space;(1-t)log(1-y)" title="L = tlogy - (1-t)log(1-y)" />
 
 クロスエントロピー (確率: y, 正解ラベル: t)  
-2 値分類 :  
+2 値分類 :
+
 <img src="https://latex.codecogs.com/svg.latex?L&space;=&space;-tlogy&space;-&space;(1-t)log(1-y)" title="L = -tlogy - (1-t)log(1-y)" /><br />
-多値分類 :  
+
+多値分類 :
+
 <img src="https://latex.codecogs.com/svg.latex?L&space;=&space;-\sum&space;t_i&space;logy_i" title="L = -\sum t_i logy_i" />
 
 ### 尤度とは？
