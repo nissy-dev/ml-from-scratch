@@ -6,14 +6,14 @@
   - [ロジスティック回帰](#ロジスティック回帰)
     - [実装](#実装)
     - [理論](#理論)
-  - [尤度とは？](#尤度とは)
-  - [NN モデルと Logistic 回帰モデルの比較](#nn-モデルと-logistic-回帰モデルの比較)
-- [ランダムフォレスト](#ランダムフォレスト)
-  - [実装](#実装-1)
-  - [理論](#理論-1)
-  - [決定木](#決定木)
-  - [特徴](#特徴)
-- [サポートベクターマシーン](#サポートベクターマシーン)
+    - [尤度とは？](#尤度とは)
+    - [NN モデルと Logistic 回帰モデルの比較](#nn-モデルと-logistic-回帰モデルの比較)
+  - [ランダムフォレスト](#ランダムフォレスト)
+    - [実装](#実装-1)
+    - [理論](#理論-1)
+    - [決定木](#決定木)
+    - [特徴](#特徴)
+  - [サポートベクターマシーン](#サポートベクターマシーン)
 
 ## ロジスティック回帰
 
@@ -38,7 +38,7 @@ Sigmoid 関数 ： <img src="https://latex.codecogs.com/svg.latex?L&space;=&spac
 多値分類 :  
 <img src="https://latex.codecogs.com/svg.latex?L&space;=&space;-\sum&space;t_i&space;logy_i" title="L = -\sum t_i logy_i" />
 
-## 尤度とは？
+### 尤度とは？
 
 ある事象が起きた時を考える。その事象が起きた時の前提条件を考える時に、その青木た事象の結果から見た時の与えられた前提条件の確からしさを返す関数のこと。
 
@@ -46,7 +46,7 @@ Sigmoid 関数 ： <img src="https://latex.codecogs.com/svg.latex?L&space;=&spac
 
 クロスエントロピーは、対数尤度にマイナスをかけたものである。
 
-## NN モデルと Logistic 回帰モデルの比較
+### NN モデルと Logistic 回帰モデルの比較
 
 ref: https://www.renom.jp/ja/notebooks/tutorial/basic_algorithm/lossfunction/notebook.html
 
@@ -56,22 +56,22 @@ ref: https://www.renom.jp/ja/notebooks/tutorial/basic_algorithm/lossfunction/not
 | 多値分類 (NN)       | softmax    | cross entropy       |
 | 回帰 (NN)           | -          | **MSE(2 乗和誤差)** |
 
-# ランダムフォレスト
+## ランダムフォレスト
 
-## 実装
+### 実装
 
 ```
 $ python random_forest/sample.py
 $ python random_forest/iris.py
 ```
 
-## 理論
+### 理論
 
 1. 作成する決定木の分だけ、重複を許してデータをサンプリング (bootstrap sampling)
 2. それぞれのデータを利用して、決定木を作成する
 3. それぞれの決定木の予想結果の多数決で出力を決定する
 
-## 決定木
+### 決定木
 
 特徴量の値を閾値と用いてデータを分割する木構造を作成する。  
 木構造の成長は、基本的には、ノードの要素が 1 つになるか同じラベルになるかのいずれかまで行う。
@@ -87,7 +87,7 @@ $ python random_forest/iris.py
 決定木は、通常では過学習している状態。なので、**枝かりをして汎用性を高める。**(枝かりも実装済み)  
 Random forest では、複数の決定木を用いることで過学習の影響を無くしている。
 
-## 特徴
+### 特徴
 
 - チューニングに必要なパラメータが少ない
 - 特徴量の重要度などを算出できることができ、解釈性が高い
@@ -95,6 +95,6 @@ Random forest では、複数の決定木を用いることで過学習の影響
 - 説明変数が多数であってもうまく働く
 - **Feature Scaling(正規化, 標準化)がそこまで必要ではない**
 
-# サポートベクターマシーン
+## サポートベクターマシーン
 
 TODO
